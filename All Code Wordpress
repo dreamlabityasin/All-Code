@@ -1,1 +1,54 @@
+/* Custom Tab Create Code Start */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons = document.querySelectorAll(
+        ".button-1, .button-2, .button-3, .button-4, .button-5, .button-6, .button-7, .button-8, .button-9, .button-10, .button-11, .button-12"
+    );
+
+    const images = document.querySelectorAll(
+        ".button-img-1, .button-img-2, .button-img-3, .button-img-4, .button-img-5, .button-img-6, .button-img-7, .button-img-8, .button-img-9, .button-img-10, .button-img-11, .button-img-12"
+    );
+
+    /* 🔹 page load হলে সব image hide */
+    images.forEach(img => img.style.display = "none");
+
+    /* 🔹 default image show */
+    const defaultImg = document.querySelector(".button-img-1");
+    if (defaultImg) defaultImg.style.display = "block";
+
+    /* 🔹 default button active */
+    const defaultBtn = document.querySelector(".button-1");
+    if (defaultBtn) defaultBtn.classList.add("tab-active");
+
+    buttons.forEach((btn, index) => {
+        btn.addEventListener("click", function () {
+
+            buttons.forEach(b => b.classList.remove("tab-active"));
+            images.forEach(img => img.style.display = "none");
+
+            btn.classList.add("tab-active");
+            images[index].style.display = "block";
+        });
+    });
+
+});
+
+/* Custom Tab Create Code End */
+
+
+
+/* Add A Custom Class Start */
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header-section");
+
+  if (window.scrollY > 0) {
+    header.classList.add("custom-sticky");
+  } else {
+    header.classList.remove("custom-sticky");
+  }
+});
+
+/* Add A Custom Class End */
 
