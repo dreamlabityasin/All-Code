@@ -52,3 +52,14 @@ window.addEventListener("scroll", function () {
 
 /* Add A Custom Class End */
 
+
+/* Auto Slider Run Code Start */ 
+
+selector .swiper-wrapper{
+  transition-timing-function: linear !important; 
+}
+
+/* Auto Slider Run Code End */
+
+
+
