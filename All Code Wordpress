@@ -72,3 +72,16 @@ add_action('wp_footer', function () {
 
 /* Child Theme Active Check End */
 
+
+/* Section Slider Clip path start */
+
+clip-path: inset(0 -200% 0 0);
+
+/* Section Slider Clip path start */
+
+
+
+
+
+
+
